@@ -3,67 +3,47 @@
 ![Bintray](https://img.shields.io/badge/bintray-v1.0.1-blue.svg)
 
 ## 1. Result
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/28835056/103124087-e9cf9b80-46c9-11eb-8c9e-46c6cc5126f2.gif)
-
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/28835056/103345075-c0e94500-4ad3-11eb-9438-47008b6dbcc3.gif)
 ## 2. Features
-This is a library that lets you randomly place buttons.
-I placed buttons based on ConstraintLayout and used my algorithm to prevent overlapping buttons.
+This is a library that lets you set a seekbar vertical.
+I changed the concept between height and width.
+And there is a some tools you can customized the radius or progress color.
 
 ## 3. Dependency
 ```
-    implementation 'com.jakchang.taglayout:tag-layout:1.0.2'
+    implementation 'com.jakchang.vertical_seekbar:vertical-seekbar:1.0.1'
 ```
 
 ## 4. Property
 
 | Name | Format | Description |
 |---|:---:|---|
-| maxSize | string | this attribute means the maximum value of the selectable count |
-| selectedBackgroundColor | color | this attribute means the color of the selected button background |
-| unSelectedBackgroundColor | color | this attribute means the color of the unSelected button background |
-| buttonWidth | dimension | this attribute means the button width |
-| buttonHeight | dimension | this attribute means the button height |
-| buttonPadding | dimension | this attribute means the button padding |
-| isShuffled | boolean | this attribute means the shuffle flag of buttons |
+| seekBarColor | color | this attribute means the color of the seekbar background |
+| progressColor | color | this attribute means the color of the progressbar |
+| radius | float | this attribute means the radius of all side |
+| topLeftRadius | float | this attribute means the topLeftRadius |
+| topRightRadius | float | this attribute means the topRightRadius |
+| bottomLeftRadius | float | this attribute means the bottomLeftRadius |
+| bottomRightRadius | float | this attribute means the bottomRightRadius |
 
 ## 5. Example Code
 
 *xml code*
 ```
-   <com.jakchang.taglayout.TagLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:entries="@array/testArray"
-        app:maxSize="10"
-        app:selectedBackgroundColor="@color/colorWhite"
-        app:unSelectedBackgroundColor="@color/colorBlack"
-        app:buttonWidth="100dp"
-        app:buttonHeight="100dp"
-        app:buttonPadding="10dp"
-        app:isShuffled="false"
-        />
+    <com.jakchang.vertical_seekbar.VerticalSeekBar
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:thumb="@drawable/seekbar_thumb"
+        android:maxHeight="100dp"
+        app:progressColor="@color/colorGreen"
+        app:radius="100"
+        app:seekBarColor="@color/colorOrange" />
 ```
 
-*kotlin code*
-```
-        val dataList =arrayListOf("aaaaa","bbbbbb","cccccccccccccccccccccccccccc","dddddddddddddddddddddddddddd",
-            "eeeee","ffffffffff","ggggggg","hhh","iii","jjjjj","kkkkk","l","m","n")
-
-
-        val listener : TagButtonClickListener = object :TagButtonClickListener{
-            override fun onRandomButtonClick(button: Button, index: Int) {
-                Toast.makeText(this@MainActivity,"Button Text : ${button.text.toString()}",Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        myTagLayout.initButtonList(dataList)
-        myTagLayout.setButtonClickListener(listener)
-        myTagLayout.init()
-```
 ## 6. Issue
 
-When delivering a Drawable of the button, View do not render properly, so only the Color is changed.
-Also, there is a problem that creates a gap when placed in ScrollView, so I'm currently working on it.
+    This seekbar is based on the concept of the change between height and width with rotation.
+    So If you want to scale the width of the seekbar, you have to set the maxHeight as you see above example. 
 
 ## 7. License
 
