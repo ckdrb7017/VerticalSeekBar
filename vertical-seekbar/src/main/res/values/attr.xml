@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VerticalSeekBarStyle">
+        <attr name="seekBarColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="radius" format="float"/>
+        <attr name="topLeftRadius" format="float"/>
+        <attr name="topRightRadius" format="float"/>
+        <attr name="bottomLeftRadius" format="float"/>
+        <attr name="bottomRightRadius" format="float"/>
+        <attr name="thumbShape" format="string"/>
+        <attr name="thumbColor" format="color"/>
+        <attr name="degree" format="float"/>
+
+    </declare-styleable>
+</resources>

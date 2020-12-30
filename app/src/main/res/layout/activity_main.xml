@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+<!--
+    this seekbar is rotated -90 degree, so if you want to wide the width,
+    use maxHeight instead of maxWidth.
+    android:maxHeight="100dp"
+-->
+<!--
+    <com.jakchang.vertical_seekbar.VerticalSeekBar
+        android:layout_width="55dp"
+        android:layout_height="200dp"
+        android:thumb="@drawable/seekbar_thumb"
+        app:degree="270"
+        app:progressColor="@color/colorGreen"
+        app:radius="10"
+        app:seekBarColor="@color/colorOrange" />
+
+    <com.jakchang.vertical_seekbar.VerticalSeekBar
+        android:layout_width="50dp"
+        android:layout_height="200dp"
+        android:thumb="@drawable/seekbar_thumb"
+        app:radius = "10"
+        app:degree = "90"
+        app:seekBarColor="@color/colorOrange"
+        app:progressColor="@color/colorGreen"/>-->
+
+</LinearLayout>
